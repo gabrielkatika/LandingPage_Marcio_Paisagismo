@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(32, 109, 13, 0.0);
+    transition: background-color 2.0s ease-in-out;
+}
+
+header.scrolled {
+    background-color: rgba(40, 43, 40, 0.5);
+
+}
+
+.navbar {
+    font-family: 'GFS Didot', serif;
+    font-family: 'Sora', sans-serif;
+    margin-left: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 10);
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+#logo {
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 180px;
+}
+
+#social-icons {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.info-box .instagram-icon,
+.info-box .whatsapp-icon {
+    font-size: 2em;
+}
+
+.info-box .instagram-icon {
+    color: white;
+}
+
+.info-box .whatsapp-icon {
+    color: white;
+}
+
+.navbar.scrolled {
+    background-color: rgba(5, 88, 23, 0.9);
+    color: white;
+}
+
+#carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    filter: brightness(65%);
+}
+
+#carousel img.active {
+    opacity: 1;
+}
+
+#main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: rgba(143, 13, 13, 0.9);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-arrow.left {
+    left: 20px;
+}
+
+.carousel-arrow.right {
+    right: 20px;
+}
+
+/* ... CSS do serviço ... */
+#servicos {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.servico {
+    width: 100%;
+    height: 25vh;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.servico:hover {
+    transform: scale(1.05);
+}
+
+.servico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    transition: filter 0.5s ease-in-out;
+}
+
+.servico-content {
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.servico:hover img {
+    filter: brightness(50%);
+}
+
+.servico:hover .servico-content {
+    opacity: 1;
+}
+
+.servico h3 {
+    margin-top: 75PX;
+    font-family: 'GFS Didot', serif;
+    font-family: 'Sora', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    font-family: 'GFS Didot', serif;
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+}
+
+/* ... CSS do perfil ... */
+
+#perfil {
+    background-color: rgb(6, 102, 50);
+    padding: 2px 0;
+    text-align: center;
+    position: relative;
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-photo img {
+    width: 700px;
+    height: 700px;
+    margin-right: 200px;
+}
+
+.perfil-text {
+    font-family: 'GFS Didot', serif;
+    font-family: 'Sora', sans-serif;
+    max-width: 700px;
+    text-align: left;
+    margin-left: 800px;
+    margin-top: 50px;
+    position: absolute;
+    background-color: rgba(5, 88, 23, 0.4);
+    border: 2px solid rgb(248, 246, 246);
+    color: azure;
+    padding: 30px;
+    padding-top: 50px;
+}
+
+/* ... CSS do contato ... */
+
+#contato {
+    background-color: rgb(6, 102, 46);
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+#contato-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#contato-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 24px;
+}

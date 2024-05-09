@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Administração</title>
+</head>
+
+<body>
+    <header>
+        <h1>Painel de Controle</h1>
+    </header>
+
+    <section id="servicos-admin">
+        <h2>Gerenciar Serviços</h2>
+        <form id="form-servicos">
+            <label for="nome-servico">Nome do Serviço:</label>
+            <input type="text" id="nome-servico" name="nome-servico" required>
+            <label for="descricao-servico">Descrição:</label>
+            <textarea id="descricao-servico" name="descricao-servico" required></textarea>
+            <button type="submit">Adicionar</button>
+
+            <div>
+                <label for="selecione-servico">Selecione o Serviço:</label>
+                <select id="selecione-servico">
+                    <!-- Opções de serviço serão adicionadas dinamicamente com JavaScript -->
+                </select>
+
+                <div class="servico-lista" id="servico-lista">
+                    <!-- Serviços existentes serão adicionados dinamicamente com JavaScript -->
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section id="imagens-admin">
+        <h2>Gerenciar Imagens</h2>
+        <form id="form-imagens">
+            <label for="url-imagem">URL da Imagem:</label>
+            <input type="url" id="url-imagem" name="url-imagem" required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="imagem-lista" id="imagem-lista">
+            <!-- Imagens existentes serão adicionadas dinamicamente com JavaScript -->
+        </div>
+
+        <div>
+            <h3>Imagens Cadastradas</h3>
+            <div class="imagem-lista" id="imagem-lista-cadastradas">
+                <!-- Imagens cadastradas existentes serão adicionadas dinamicamente com JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Empresa de Paisagismo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
